@@ -1,0 +1,125 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: url(img/bg-intro-desktop.png);
+  box-shadow: inset 0 0 0 1000px hsl(0deg 77% 52% / 59%);
+  background-position: center;
+  background-size: cover;
+  padding: 10rem;
+  height: 100vh;
+}
+
+h1 {
+  color: white;
+  font-weight: 700 !important;
+  margin-right: 15%;
+  font-size: 3rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+p {
+  width: 85%;
+  color: white;
+}
+
+button {
+  padding: 0.9em !important;
+  width: 100%;
+  border: none;
+  background-color: hsl(154, 59%, 51%);
+  border-radius: 5px !important;
+  color: white;
+  font-size: 0.85rem !important;
+  box-shadow: 1px 2px 4px hsl(156deg 40% 37%);
+  letter-spacing: 2 !important;
+}
+
+.terms-of-service {
+  color: hsl(0, 100%, 74%);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 15px;
+}
+
+.container-left {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 1rem;
+}
+
+.container-right {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  justify-items: center;
+  align-content: center;
+}
+
+.disclaimer {
+  font-size: 0.6rem;
+  text-align: center;
+  margin-top: 1rem;
+  color: gray;
+}
+
+.form-banner {
+  text-align: center;
+  background: hsl(248, 32%, 49%);
+  border-radius: 8px;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  color: white;
+  font-size: 0.8rem;
+  margin-bottom: 1.5em;
+  box-shadow: 1px 2px 5px hsl(264deg 45% 29%);
+}
+
+.form-wrapper {
+  background-color: white;
+  padding: 4rem 3rem;
+  border-radius: 8px;
+}
+
+.form-control {
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  height: calc(2.8em + 0.75rem + 2px) !important;
+  color: #2e2d36;
+  text-indent: 1.1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 15px;
+  }
+
+  .container-left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .container-right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-items: center;
+    align-content: center;
+  }
+}
