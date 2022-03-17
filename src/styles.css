@@ -1,14 +1,13 @@
 * {
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  background: url(img/bg-intro-desktop.png);
-  box-shadow: inset 0 0 0 1000px hsl(0deg 77% 52% / 59%);
-  background-position: center;
-  background-size: cover;
-  padding: 10rem;
+  background-color: hsl(0, 100%, 74%) !important;
+  background-image: url("img/bg-intro-desktop.png");
+  padding: 9rem 3rem;
   height: 100vh;
 }
 
@@ -35,10 +34,7 @@ button {
   font-size: 0.85rem !important;
   box-shadow: 1px 2px 4px hsl(156deg 40% 37%);
   letter-spacing: 2 !important;
-}
-
-.terms-of-service {
-  color: hsl(0, 100%, 74%);
+  margin-top: 1rem !important;
 }
 
 .wrapper {
@@ -46,7 +42,7 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-top: 15px;
 }
 
@@ -60,9 +56,37 @@ button {
 .container-right {
   display: flex;
   flex-direction: column;
-  width: 35%;
+  width: 30%;
   justify-items: center;
   align-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.error-message {
+  font-size: 12px !important;
+  color: red;
+  font-style: italic;
+  text-align-last: end;
+}
+
+.input-invalid {
+  background: url(img/icon-error.svg) no-repeat;
+  background-position: 25rem center;
+}
+
+.invalid-icon {
+  position: relative;
+  float: right;
+  margin-right: 1rem;
+  top: -3.7rem;
+  opacity: 0;
+}
+
+.terms-of-service {
+  color: hsl(0, 100%, 74%);
 }
 
 .disclaimer {
@@ -86,7 +110,7 @@ button {
 
 .form-wrapper {
   background-color: white;
-  padding: 4rem 3rem;
+  padding: 2.5rem 3rem;
   border-radius: 8px;
 }
 
@@ -99,20 +123,37 @@ button {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    padding: 3rem 3rem;
+  }
+
   .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin-top: 15px;
   }
 
   .container-left {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 1rem;
+    padding: 0.5rem;
+    justify-content: center;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2rem !important;
+    margin: 0;
+  }
+
+  p {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
   }
 
   .container-right {
@@ -121,5 +162,20 @@ button {
     width: 100%;
     justify-items: center;
     align-content: center;
+  }
+
+  .form-banner {
+    text-align: center;
+    background: hsl(248, 32%, 49%);
+    border-radius: 8px;
+    padding: 1rem 5rem;
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 1.5em;
+    box-shadow: 1px 2px 5px hsl(264deg 45% 29%);
+  }
+
+  .form-wrapper {
+    padding: 2rem 1.5rem;
   }
 }
