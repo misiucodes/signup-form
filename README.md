@@ -21,7 +21,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](src/img/screenshot.png)
+![](/images/screenshot.png)
 
 ### Links
 
