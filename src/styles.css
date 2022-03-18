@@ -1,27 +1,72 @@
-* {
-  font-family: "Poppins", sans-serif;
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish--blue: hsl(246, 25%, 77%);
+}
+
+/* RESET */
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
   background-color: hsl(0, 100%, 74%) !important;
-  background-image: url("img/bg-intro-desktop.png");
-  padding: 9rem 3rem;
-  height: 100vh;
+  background-image: url("../images/bg-intro-desktop.png") !important;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
 }
 
-h1 {
+/*GLOBAL*/
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 3rem;
+  min-height: 100vh;
+}
+
+/*CONTAINER-LEFT*/
+
+.container-left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 500px;
+  margin-right: 5rem;
+}
+
+.container-left > h1 {
+  font-size: 3rem !important;
+  margin-top: 2rem !important;
   color: white;
   font-weight: 700 !important;
-  margin-right: 15%;
-  font-size: 3rem !important;
-  margin-bottom: 1.5rem !important;
 }
 
-p {
-  width: 85%;
+.container-left > p {
+  margin-top: 1rem;
   color: white;
+}
+
+/*CONTAINER RIGHT*/
+
+.container-right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-items: center;
+  align-content: center;
+  max-width: 550px;
 }
 
 button {
@@ -34,31 +79,6 @@ button {
   font-size: 0.85rem !important;
   box-shadow: 1px 2px 4px hsl(156deg 40% 37%);
   letter-spacing: 2 !important;
-  margin-top: 1rem !important;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  margin-top: 15px;
-}
-
-.container-left {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  padding: 1rem;
-}
-
-.container-right {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  justify-items: center;
-  align-content: center;
 }
 
 .hidden {
@@ -74,14 +94,14 @@ button {
 
 .input-invalid {
   background: url("images/icon-error.svg") no-repeat;
-  background-position: 25rem center;
+  background-position: 26rem center;
 }
 
 .invalid-icon {
   position: relative;
   float: right;
   margin-right: 1rem;
-  top: -3.7rem;
+  top: -55px;
   opacity: 0;
 }
 
@@ -100,11 +120,10 @@ button {
   text-align: center;
   background: hsl(248, 32%, 49%);
   border-radius: 8px;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+  padding: 1.4rem;
   color: white;
-  font-size: 0.8rem;
-  margin-bottom: 1.5em;
+  font-size: 0.9rem;
+  margin-bottom: 1em;
   box-shadow: 1px 2px 5px hsl(264deg 45% 29%);
 }
 
@@ -112,21 +131,19 @@ button {
   background-color: white;
   padding: 2.5rem 3rem;
   border-radius: 8px;
+  box-shadow: 2px 6px 29px hsl(0deg 0% 25% / 51%);
 }
 
 .form-control {
-  font-size: 0.85rem !important;
-  font-weight: 500 !important;
-  height: calc(2.8em + 0.75rem + 2px) !important;
-  color: #2e2d36;
-  text-indent: 1.1rem;
+  background-color: white;
+  height: calc(2.2rem + 0.95rem) !important;
+  border-radius: 0.5rem;
+  width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    padding: 3rem 3rem;
-  }
+/*MOBILE SIZING*/
 
+@media screen and (max-width: 1000px) {
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -139,21 +156,24 @@ button {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0.5rem;
     justify-content: center;
+    align-items: center;
+    margin: 0 auto;
   }
 
-  h1 {
+  .container-left > h1 {
     text-align: center;
-    font-size: 2rem !important;
-    margin: 0;
+    font-size: 2.25rem !important;
+    margin: 1rem;
+    width: 100%;
   }
 
-  p {
+  .container-left > p {
     text-align: center;
     padding: 0;
     margin: 0;
     width: 100%;
+    font-size: 0.95rem;
   }
 
   .container-right {
